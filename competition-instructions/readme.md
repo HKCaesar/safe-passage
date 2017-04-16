@@ -72,6 +72,8 @@ instead it is to find where those vehicles are in the image.
 
 [0] suggests that this is still an open problem in computer vision,
 and links to the paper about _overfeat_ [1].
+[4] is an interesting implementation of this method.
+This might be overkill for this project, since the sizes of the boxes are pretty constant.
 
 Gravity isn't important in these images, in fact the orientation of them isn't important.
 What translations of the images should we do?
@@ -83,3 +85,5 @@ What translations of the images should we do?
 [2] https://lmb.informatik.uni-freiburg.de/Publications/2016/OB16a/oliveira16icra.pdf
 
 [3] https://www.cs.toronto.edu/~vmnih/docs/Mnih_Volodymyr_PhD_Thesis.pdf
+
+[4] https://github.com/TensorBox/TensorBox
