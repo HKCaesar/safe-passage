@@ -10,7 +10,7 @@ import math
 chipdir = 'data/images/chips'
 imagedir = 'data/images/training'
 # in pixels
-boxsize = 299
+boxsize = 150
 
 
 def setupDirectories():
