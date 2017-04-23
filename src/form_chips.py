@@ -10,7 +10,7 @@ import math
 chipdir = 'data/images/chips'
 imagedir = 'data/images/training'
 # in pixels
-boxsize = 150
+boxsize = 299
 
 
 def setupDirectories():
@@ -68,12 +68,12 @@ def makeRandomChips(observation, N, coords, image):
     listed in coords."""
     for i in range(N):
         overlap = True
-        rand_x = random.randint(boxsize / 2, image.width - (boxsize/2))
-        rand_y = random.randint(boxsize / 2, image.height - (boxsize/2))
+        rand_x = random.randint(boxsize // 2, image.width - (boxsize//2))
+        rand_y = random.randint(boxsize // 2, image.height - (boxsize//2))
         while overlap:
             overlap = checkForOverlap(rand_x, rand_y, coords)
-            rand_x = random.randint(boxsize / 2, image.width - (boxsize/2))
-            rand_y = random.randint(boxsize / 2, image.height - (boxsize/2))
+            rand_x = random.randint(boxsize // 2, image.width - (boxsize//2))
+            rand_y = random.randint(boxsize // 2, image.height - (boxsize//2))
         bbox = formBBox(rand_x, rand_y)
         cropped = image.crop(bbox)
         filename = os.path.join(
@@ -88,10 +88,10 @@ def formBBox(x, y):
     """Find the bounding box, given a x and y coordinate."""
     # this tuple can be passed direct into the Image.crop function
     return (
-        x - boxsize / 2,
-        y - boxsize / 2,
-        x + boxsize / 2,
-        y + boxsize / 2
+        x - boxsize // 2,
+        y - boxsize // 2,
+        x + boxsize // 2,
+        y + boxsize // 2
     )
 
 
